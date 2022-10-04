@@ -1,18 +1,22 @@
 <template>
     <div class="content">
-        <div class="title m-b-md">
-            {{ title }}
-        </div>
+        <AppNav :title="title" />
+        <main class="container mt-3">
+            <PostList />
+        </main>
     </div>
 </template>
 
 <script>
+import AppNav from "./AppNav.vue";
+import PostList from "./posts/PostList.vue";
 export default {
-    name: 'App',
+    name: "App",
     data() {
         return {
-            title: "Work in progress...",
+            title: "Boolpress",
         };
     },
+    components: { AppNav, PostList }
 };
 </script>
