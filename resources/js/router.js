@@ -11,6 +11,7 @@ Vue.use(VueRouter);
 // Definisco le rotte
 const routes = new VueRouter({
     mode: "history",
+    linkExactActiveClass: "active",
     routes: [
         { path: "/", component: HomePage, name: "home" },
         { path: "/about", component: AboutPage, name: "about" },
