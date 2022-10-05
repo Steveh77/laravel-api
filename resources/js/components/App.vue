@@ -2,14 +2,13 @@
     <div class="content">
         <AppNav :title="title" />
         <main class="container mt-3">
-            <PostList />
+            <router-view></router-view>
         </main>
     </div>
 </template>
 
 <script>
 import AppNav from "./AppNav.vue";
-import PostList from "./posts/PostList.vue";
 export default {
     name: "App",
     data() {
@@ -17,6 +16,6 @@ export default {
             title: "Boolpress",
         };
     },
-    components: { AppNav, PostList }
+    components: { AppNav }
 };
 </script>
