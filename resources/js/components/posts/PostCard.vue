@@ -1,11 +1,13 @@
 <template>
     <div>
-        <div class="card my-2">
+        <div class="card my-2 d-flex flex-row align-items-center">
             <div class="card-body">
                 <h5 class="card-title">{{post.title}}</h5>
                 <h6 class="card-subtitle mb-2 text-muted">Publicato il: {{publishedAt}}</h6>
                 <p class="card-text">{{post.content}}</p>
             </div>
+            <router-link :to="{name: 'post-show', params:{ id: post.id } }" class="btn btn-success mr-2">Vedi
+            </router-link>
         </div>
     </div>
 </template>
